@@ -11,11 +11,18 @@
 
 
 
-	<h:form>
+	<h:form id="formUsuario">
 
+		<h1>Eventos ON</h1>
 
+		<h:inputText id="campoNome" value="#{usuarioBean.email}" />
+		<br />
+		<h:inputText id="campoSenha" value="#{usuarioBean.senha}" />
+		<h:commandButton value="Entrar" action="#{usuarioBean.mostrarUsuario}"/>
 
+		<br />
 
+		<h:outputLabel value="Entre com o Usuario e Senha" />
 
 
 	</h:form>

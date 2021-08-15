@@ -8,12 +8,16 @@ public class UsuarioBean {
 	private String nomeCompleto;
 	private String apelido;
 	private String email;
-	private double senha;
+	private String senha;
+
+	public void mostrarUsuario() {
+		email = nomeCompleto;
+	}
 
 	public UsuarioBean() {
 	}
 
-	public UsuarioBean(String nomeCompleto, String apelido, String email, double senha) {
+	public UsuarioBean(String nomeCompleto, String apelido, String email, String senha) {
 		super();
 		this.nomeCompleto = nomeCompleto;
 		this.apelido = apelido;
@@ -21,11 +25,11 @@ public class UsuarioBean {
 		this.senha = senha;
 	}
 
-	public double getSenha() {
+	public String getSenha() {
 		return senha;
 	}
 
-	public void setSenha(double senha) {
+	public void setSenha(String senha) {
 		this.senha = senha;
 	}
 
