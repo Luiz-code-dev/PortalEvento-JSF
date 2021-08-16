@@ -5,24 +5,22 @@ import javax.faces.bean.ManagedBean;
 @ManagedBean(name = "usuarioBean")
 public class UsuarioBean {
 
+	private Integer id;
 	private String nomeCompleto;
 	private String apelido;
 	private String email;
 	private String senha;
 
-	public void mostrarUsuario() {
-		email = nomeCompleto;
-	}
-
 	public UsuarioBean() {
 	}
 
-	public UsuarioBean(String nomeCompleto, String apelido, String email, String senha) {
+	public UsuarioBean(String nomeCompleto, String apelido, String email, String senha, Integer id) {
 		super();
 		this.nomeCompleto = nomeCompleto;
 		this.apelido = apelido;
 		this.email = email;
 		this.senha = senha;
+		this.id = id;
 	}
 
 	public String getSenha() {
@@ -57,4 +55,13 @@ public class UsuarioBean {
 		this.email = email;
 	}
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	
 }
