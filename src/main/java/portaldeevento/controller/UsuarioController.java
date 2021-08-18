@@ -4,12 +4,11 @@ import java.sql.SQLException;
 import java.util.List;
 
 import javax.faces.application.FacesMessage;
-import javax.faces.bean.ApplicationScoped;
 import javax.faces.context.FacesContext;
 
 import portaldeevento.UsuarioBean;
 
-@ApplicationScoped
+
 public class UsuarioController {
 
 	private ConnectController connectController;

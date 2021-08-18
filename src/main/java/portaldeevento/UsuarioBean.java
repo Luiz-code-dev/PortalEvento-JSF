@@ -1,8 +1,13 @@
 package portaldeevento;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
 
 @ManagedBean(name = "usuarioBean")
+@RequestScoped
 public class UsuarioBean {
 
 	private Integer id;
@@ -10,6 +15,13 @@ public class UsuarioBean {
 	private String apelido;
 	private String email;
 	private String senha;
+	
+	private List<String> nomes = new ArrayList<String> ();
+	
+	public String addNome() {
+		nomes.add(nomeCompleto);
+		return "";
+	}
 
 	public UsuarioBean() {
 	}
@@ -61,6 +73,14 @@ public class UsuarioBean {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public List<String> getNomes() {
+		return nomes;
+	}
+
+	public void setNomes(List<String> nomes) {
+		this.nomes = nomes;
 	}
 
 	
