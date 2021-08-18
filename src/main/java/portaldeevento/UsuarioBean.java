@@ -6,8 +6,8 @@ import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
-@ManagedBean(name = "usuarioBean")
 @RequestScoped
+@ManagedBean(name = "usuarioBean")
 public class UsuarioBean {
 
 	private Integer id;
